@@ -1,0 +1,30 @@
+apiVersion: skaffold/v1beta1
+kind: Config
+build:
+  artifacts:
+  - image: changeme
+    context: .
+    docker: {}
+  tagPolicy:
+    envTemplate:
+      template: '{{.DOCKER_REGISTRY}}/smartnimbus/was8-demo-v1:{{.VERSION}}'
+  local: {}
+deploy:
+  kubectl: {}
+profiles:
+- name: dev
+  build:
+    artifacts:
+    - docker: {}
+    tagPolicy:
+      envTemplate:
+        template: '{{.DOCKER_REGISTRY}}/smartnimbus/was8-demo-v1:{{.DIGEST_HEX}}'
+    local: {}
+  deploy:
+    helm:
+      releases:
+      - name: was8-demo-v1
+        chartPath: charts/was8-demo-v1
+        setValueTemplates:
+          image.repository: '{{.DOCKER_REGISTRY}}/smartnimbus/was8-demo-v1'
+          image.tag: '{{.DIGEST_HEX}}'
