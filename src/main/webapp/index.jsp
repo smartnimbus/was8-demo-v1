@@ -5,7 +5,7 @@
 <body>
 	<h1>Hello World! </h1>
 	<p>
-		This is a WAS Docker Demo on EKS
+		<font size="3" color="red">This is a WAS Docker Demo on EKS!</font>
 	  </p>  
 	<p>
 		It is now
