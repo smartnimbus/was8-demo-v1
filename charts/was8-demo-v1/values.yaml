@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: 033565913883.dkr.ecr.eu-west-1.amazonaws.com/smartnimbus/was8-demo-v1
-  tag: 1.0.2
+  tag: 1.0.11
   pullPolicy: IfNotPresent
 service:
   name: was8-demo-v1
