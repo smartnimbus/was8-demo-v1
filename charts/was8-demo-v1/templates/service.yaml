@@ -15,12 +15,6 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-  - port: 9043
-    name: http-9043
-    protocol: TCP
-  - port: 9443
-    name: http-9443
-    protocol: TCP
   - port: {{ .Values.service.externalPort }}
     targetPort: {{ .Values.service.internalPort }}
     protocol: TCP
