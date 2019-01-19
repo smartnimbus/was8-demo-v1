@@ -24,7 +24,7 @@ spec:
         ports:
         - containerPort: 9043 
         - containerPort: 9043 
-        #- containerPort: 9443 #{{ .Values.service.internalPort }}
+        - containerPort: {{ .Values.service.internalPort }}
         #livenessProbe:
         #  httpGet:
         #    path: {{ .Values.probePath }}

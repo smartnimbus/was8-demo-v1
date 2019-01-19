@@ -21,9 +21,9 @@ spec:
   - port: 9443
     name: http-9443
     protocol: TCP
-  # - port: {{ .Values.service.externalPort }}
-  #   targetPort: {{ .Values.service.internalPort }}
-  #   protocol: TCP
-  #   name: http
+  - port: {{ .Values.service.externalPort }}
+    targetPort: {{ .Values.service.internalPort }}
+    protocol: TCP
+    name: http
   selector:
     app: {{ template "fullname" . }}

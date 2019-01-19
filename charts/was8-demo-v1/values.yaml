@@ -9,8 +9,8 @@ image:
 service:
   name: jx-was8-demo-v1
   type: ClusterIP
-  externalPort: 9043
-  internalPort: 9043
+  externalPort: 80
+  internalPort: 8080
   annotations:
     fabric8.io/expose: "true"
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
@@ -21,14 +21,14 @@ resources:
   requests:
     cpu: 400m
     memory: 512Mi
-probePath: /actuator/health
-livenessProbe:
-  initialDelaySeconds: 60
-  periodSeconds: 10
-  successThreshold: 1
-  timeoutSeconds: 1
-readinessProbe:
-  periodSeconds: 10
-  successThreshold: 1
-  timeoutSeconds: 1
-terminationGracePeriodSeconds: 10
+# probePath: /actuator/health
+# livenessProbe:
+#   initialDelaySeconds: 60
+#   periodSeconds: 10
+#   successThreshold: 1
+#   timeoutSeconds: 1
+# readinessProbe:
+#   periodSeconds: 10
+#   successThreshold: 1
+#   timeoutSeconds: 1
+# terminationGracePeriodSeconds: 10
