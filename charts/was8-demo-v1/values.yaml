@@ -8,7 +8,8 @@ image:
   pullPolicy: IfNotPresent
 service:
   name: was8-demo-v1
-  type: ClusterIP
+  type: LoadBalancer 
+  #ClusterIP
   externalPort: 80
   internalPort: 8080
   annotations:
