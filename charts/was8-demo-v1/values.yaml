@@ -21,14 +21,14 @@ resources:
   requests:
     cpu: 400m
     memory: 512Mi
-# probePath: /actuator/health
-# livenessProbe:
-#   initialDelaySeconds: 60
-#   periodSeconds: 10
-#   successThreshold: 1
-#   timeoutSeconds: 1
-# readinessProbe:
-#   periodSeconds: 10
-#   successThreshold: 1
-#   timeoutSeconds: 1
-# terminationGracePeriodSeconds: 10
+probePath: /actuator/health
+livenessProbe:
+  initialDelaySeconds: 60
+  periodSeconds: 10
+  successThreshold: 1
+  timeoutSeconds: 1
+readinessProbe:
+  periodSeconds: 10
+  successThreshold: 1
+  timeoutSeconds: 1
+terminationGracePeriodSeconds: 10
