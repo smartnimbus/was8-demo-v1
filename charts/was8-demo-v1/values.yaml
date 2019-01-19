@@ -9,7 +9,7 @@ image:
 service:
   name: jx-was8-demo-v1
   type: ClusterIP
-  externalPort: 80
+  externalPort: 9043
   internalPort: 9043
   annotations:
     fabric8.io/expose: "true"
