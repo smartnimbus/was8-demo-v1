@@ -3,7 +3,7 @@
 <title>Hello World!</title>
 </head>
 <body>
-	<h1>Hello World! </h1>
+	<h1>Hello World! Hello Milan 13:48 </h1>
 	<p>
 		<font size="3" color="BLUE">This is a WAS Docker Demo on EKS!</font>
 	  </p>  
