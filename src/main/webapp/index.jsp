@@ -3,9 +3,9 @@
 <title>Hello World!</title>
 </head>
 <body>
-	<h1>Hello World! Hello Milan 13:48 </h1>
+	<h1>Hello Chigs 22:58 World! </h1>
 	<p>
-		<font size="3" color="BLUE">This is a WAS Docker Demo on EKS!</font>
+		<font size="3" color="BLUE">This is a WAS Docker Demo on EKS! </font>
 	  </p>  
 	<p>
 		It is now
